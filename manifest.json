@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Modal Remover",
+  "version": "1",
+  "description": "Removes the login modal and unlocks the page on chatgpt.com.",
+
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": [        
+        "https://chatgpt.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
